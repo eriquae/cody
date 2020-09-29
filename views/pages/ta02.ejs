@@ -3,7 +3,6 @@
 <head>
   <% include ../includes/header.ejs %>
 </head>
-
 <body>
   <% include ../includes/nav.ejs %>
 <div class="jumbotron text-center">
@@ -13,9 +12,14 @@
   </div>
 </div>
 <div class="container">
+<form action = '/ta02/addUser' method='POST'><input type="text" name="newName"><button type="submit">Add Name</button></form>
+<% for (let name of names) { %>
+<%= name %><br/>
+<% }; %>
+
+<form action = '/ta02/removeUser' method='POST'><input type="text" name="oldName"><button type="submit">Remove Name</button></form>
+
   
 </div>
-
-
 </body>
 </html>
